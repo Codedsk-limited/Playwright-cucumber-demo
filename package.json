@@ -1,0 +1,30 @@
+{
+  "name": "global-web-ordering-automated-tests-develop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npx ts-node src/test/helpers/init.ts",
+    "test.local.chrome": "npm run pretest & cross-env BROWSER=chrome cucumber-js test || true & npm run posttest",
+    "test.local.safari": "npm run pretest & cross-env BROWSER=safari cucumber-js test || true & npm run posttest",
+    "test.saucelabs.us": "",
+    "test.local.all": "",
+    "posttest": "npx ts-node src/test/helpers/report.ts",
+    "test:failed": "cucumber-js -p rerun @rerun.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.1.1",
+    "@playwright/test": "^1.33.0",
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.1.1",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "playwright": "^1.33.0"
+  }
+}

@@ -1,0 +1,41 @@
+# dependencies
+/node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+/.tmp
+# testing
+/coverage
+
+# production
+/build
+
+test/helpers/data
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/report/
+@rerun.txt
+cucumber-report.html
+
+# selenium reports
+reports/
+test-reports/
+gherkin/
+docs/gherkin
+docs/test-reports
+docs/test-results
+.idea
+*.iml
+
+# Script generated feature files
+src/test/features/Generated
+
+# VS code
+.vscode
+/.run/
